@@ -3,7 +3,7 @@
 int main()
 {
     int n,k,i=0,temp=0,rev=0;
-    printf("Enter the no. to get its reverse:");
+    printf("Enter the no. to Check whether it is palindrome or not:");
     scanf("%d",&n);
     k=n;
     while(n!=0)
