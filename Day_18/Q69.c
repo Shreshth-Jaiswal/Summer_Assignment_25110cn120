@@ -1,0 +1,49 @@
+// Write a program to Bubble sort.
+#include <stdio.h>
+void main()
+{
+    int n;
+
+    printf("Enter the no. of element you wanna enter in the element:");
+    scanf("%d",&n);
+
+    int arr[n];
+
+// Array Input 
+    for(int i=0;i<n;i++)
+    {
+        printf("%d element:",i+1);
+        scanf("%d",&arr[i]);
+    } 
+
+// Input Array Output
+    printf("\nArray[]={");
+    for(int i=0;i<n-1;i++)
+    {
+        printf("%d,",arr[i]);
+    }
+    printf("%d}",arr[n-1]);
+
+// Bubble Sorting
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=0;j<n-i-1;j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+
+// Sorted Array Output
+    printf("\n----After Sorting----");
+    printf("\nArray[]={");
+    for(int i=0;i<n-1;i++)
+    {
+        printf("%d,",arr[i]);
+    }
+    printf("%d}",arr[n-1]);
+}
